@@ -39,3 +39,26 @@ Following are the methods that will be used in the code body:
    This method removs all data rows from the CSV file.
    The header row is preserved so the file structure remains intact for future use.
 
+
+## Sample Usage
+Demonstration of how to use custom csv class.
+
+csv = CustomCSV("students.csv")
+
+#Read headers and data rows
+headers = csv.get_headers()
+rows = csv.get_rows()
+
+#Delete a data row 
+csv.delete_row(1)
+
+#Replace a data row
+csv.replace_row(1, ["2", "Anmol","anmol@test.com"])
+
+#Create a backup copy of the file
+csv.copy_file("students_backup.csv")
+
+#Clear all data rows from the file
+csv.clear_file()
+
+
